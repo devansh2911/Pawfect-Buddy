@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Pet Adoption</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Apply for Pet Adoption</h2>
+        <form action="apply.php" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pet">Select Pet:</label>
+                <select id="pet" name="pet" required>
+                    <option value="" disabled selected>Select a Pet</option>
+                    <option value="Buddy">Buddy (Dog)</option>
+                    <option value="Whiskers">Whiskers (Cat)</option>
+                    <!-- Add more options for each pet -->
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Additional Message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" name="submit" class="submit-btn">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
